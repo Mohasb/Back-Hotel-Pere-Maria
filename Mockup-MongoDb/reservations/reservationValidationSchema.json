@@ -1,0 +1,57 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": [
+      "user",
+      "room_number",
+      "check_in_date",
+      "check_out_date",
+      "extras"
+    ],
+    "properties": {
+      "user": {
+        "bsonType": "object",
+        "required": ["email", "username"],
+        "properties": {
+          "email": {
+            "bsonType": "string"
+          },
+          "username": {
+            "bsonType": "string"
+          }
+        }
+      },
+      "room_number": {
+        "bsonType": "int"
+      },
+      "check_in_date": {
+        "bsonType": "date"
+      },
+      "check_out_date": {
+        "bsonType": "date"
+      },
+      "extras": {
+        "bsonType": "array",
+        "description": "Array of extras for the reservation.",
+        "items": {
+          "bsonType": "object",
+          "required": ["name", "price"],
+          "properties": {
+            "name": {
+              "bsonType": "string",
+              "enum": ["WiFi", "Breakfast", "Gym", "Spa", "Parking"],
+              "description": "Name of the extra service."
+            },
+            "price": {
+              "bsonType": ["double", "int"],
+              "minimum": 0,
+              "description": "Price of the extra service."
+            }
+          }
+        },
+        "minItems": 1,
+        "maxItems": 5
+      }
+    }
+  }
+}

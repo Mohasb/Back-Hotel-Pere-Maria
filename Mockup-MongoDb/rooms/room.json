@@ -1,0 +1,9 @@
+{
+  "room_number": "101",
+  "type": "Standard",
+  "description": "This is a standard room with a beautiful view.",
+  "image": "https://example.com/images/room101.jpg",
+  "price_per_night": 120.5,
+  "rate": 4,
+  "max_occupancy": 2
+}

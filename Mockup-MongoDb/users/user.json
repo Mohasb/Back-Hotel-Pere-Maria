@@ -1,0 +1,26 @@
+{
+  "user_name": "JohnDoe",
+  "email": "johndoe@example.com",
+  "password": "secretpassword",
+  "role": "user",
+  "reservations": [
+    {
+      "room_number": 101,
+      "check_in_date": {
+        "$date": "2023-12-20T00:00:00.000Z"
+      },
+      "check_out_date": {
+        "$date": "2023-12-25T00:00:00.000Z"
+      }
+    },
+    {
+      "room_number": 102,
+      "check_in_date": {
+        "$date": "2024-01-05T00:00:00.000Z"
+      },
+      "check_out_date": {
+        "$date": "2024-01-10T00:00:00.000Z"
+      }
+    }
+  ]
+}

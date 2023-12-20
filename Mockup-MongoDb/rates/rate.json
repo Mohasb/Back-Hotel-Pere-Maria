@@ -1,0 +1,9 @@
+{
+  "room": 101,
+  "user": {
+    "email": "user@example.com",
+    "name": "user"
+  },
+  "rating": 4,
+  "comment": "Enjoyed my stay, great service!"
+}

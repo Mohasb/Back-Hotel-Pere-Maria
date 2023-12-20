@@ -1,0 +1,49 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": [
+      "room_number",
+      "type",
+      "description",
+      "image",
+      "price_per_night",
+      "rate",
+      "max_occupancy"
+    ],
+    "properties": {
+      "room_number": {
+        "bsonType": "string",
+        "pattern": "^[0-9]+$",
+        "description": "Room number must be a string containing only digits."
+      },
+      "type": {
+        "bsonType": "string",
+        "description": "Room type must be a string."
+      },
+      "description": {
+        "bsonType": "string",
+        "description": "Description must be a string."
+      },
+      "image": {
+        "bsonType": "string",
+        "description": "Image URL must be a string."
+      },
+      "price_per_night": {
+        "bsonType": ["double", "int"],
+        "minimum": 0,
+        "description": "Price per night must be a non-negative number."
+      },
+      "rate": {
+        "bsonType": "int",
+        "minimum": 1,
+        "maximum": 5,
+        "description": "Rate must be an integer between 1 and 5."
+      },
+      "max_occupancy": {
+        "bsonType": "int",
+        "minimum": 1,
+        "description": "Max occupancy must be a positive integer."
+      }
+    }
+  }
+}

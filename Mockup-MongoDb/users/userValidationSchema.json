@@ -1,0 +1,53 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": [
+      "user_name",
+      "email",
+      "password",
+      "role",
+      "reservations"
+    ],
+    "properties": {
+      "user_name": {
+        "bsonType": "string"
+      },
+      "email": {
+        "bsonType": "string"
+      },
+      "password": {
+        "bsonType": "string"
+      },
+      "role": {
+        "bsonType": "string",
+        "enum": [
+          "user",
+          "admin",
+          "superAdmin"
+        ]
+      },
+      "reservations": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "object",
+          "required": [
+            "room_number",
+            "check_in_date",
+            "check_out_date"
+          ],
+          "properties": {
+            "room_number": {
+              "bsonType": "int"
+            },
+            "check_in_date": {
+              "bsonType": "date"
+            },
+            "check_out_date": {
+              "bsonType": "date"
+            }
+          }
+        }
+      }
+    }
+  }
+}
