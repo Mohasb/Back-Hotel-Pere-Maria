@@ -10,24 +10,25 @@
     ],
     "properties": {
       "user_name": {
-        "bsonType": "string"
+        "bsonType": "string",
+        "description": "User's name as a string."
       },
       "email": {
-        "bsonType": "string"
+        "bsonType": "string",
+        "description": "User's email as a string."
       },
       "password": {
-        "bsonType": "string"
+        "bsonType": "string",
+        "description": "User's password as a string."
       },
       "role": {
         "bsonType": "string",
-        "enum": [
-          "user",
-          "admin",
-          "superAdmin"
-        ]
+        "enum": ["user", "admin", "superAdmin"],
+        "description": "User's role as a string: 'user', 'admin', or 'superAdmin'."
       },
       "reservations": {
         "bsonType": "array",
+        "description": "Array of user reservations.",
         "items": {
           "bsonType": "object",
           "required": [
@@ -37,13 +38,16 @@
           ],
           "properties": {
             "room_number": {
-              "bsonType": "int"
+              "bsonType": "int",
+              "description": "Room number for the reservation as an integer."
             },
             "check_in_date": {
-              "bsonType": "date"
+              "bsonType": "date",
+              "description": "Date of check-in for the reservation."
             },
             "check_out_date": {
-              "bsonType": "date"
+              "bsonType": "date",
+              "description": "Date of check-out for the reservation."
             }
           }
         }
