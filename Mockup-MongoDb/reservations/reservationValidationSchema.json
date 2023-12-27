@@ -11,7 +11,10 @@
     "properties": {
       "user": {
         "bsonType": "object",
-        "required": ["email", "username"],
+        "required": [
+          "email",
+          "username"
+        ],
         "properties": {
           "email": {
             "bsonType": "string"
@@ -35,15 +38,27 @@
         "description": "Array of extras for the reservation.",
         "items": {
           "bsonType": "object",
-          "required": ["name", "price"],
+          "required": [
+            "name",
+            "price"
+          ],
           "properties": {
             "name": {
               "bsonType": "string",
-              "enum": ["WiFi", "Breakfast", "Gym", "Spa", "Parking"],
+              "enum": [
+                "WiFi",
+                "Breakfast",
+                "Gym",
+                "Spa",
+                "Parking"
+              ],
               "description": "Name of the extra service."
             },
             "price": {
-              "bsonType": ["double", "int"],
+              "bsonType": [
+                "double",
+                "int"
+              ],
               "minimum": 0,
               "description": "Price of the extra service."
             }

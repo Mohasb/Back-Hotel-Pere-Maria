@@ -1,30 +1,40 @@
 {
   "$jsonSchema": {
     "bsonType": "object",
-    "required": ["room", "user", "rating", "comment"],
+    "required": [
+      "room",
+      "user",
+      "rating",
+      "comment"
+    ],
     "properties": {
       "room": {
-        "bsonType": "int"
+        "bsonType": "int",
+        "description": "Room number associated with the review."
       },
       "user": {
         "bsonType": "object",
         "required": ["email", "name"],
         "properties": {
           "email": {
-            "bsonType": "string"
+            "bsonType": "string",
+            "description": "Email of the user who submitted the review."
           },
           "name": {
-            "bsonType": "string"
+            "bsonType": "string",
+            "description": "Name of the user who submitted the review."
           }
         }
       },
       "rating": {
         "bsonType": "int",
         "minimum": 1,
-        "maximum": 5
+        "maximum": 5,
+        "description": "Rating value for the reviewed item (1 to 5)."
       },
       "comment": {
-        "bsonType": "string"
+        "bsonType": "string",
+        "description": "Comment or review text."
       }
     }
   }

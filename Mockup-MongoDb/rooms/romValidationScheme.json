@@ -29,7 +29,10 @@
         "description": "Image URL must be a string."
       },
       "price_per_night": {
-        "bsonType": ["double", "int"],
+        "bsonType": [
+          "double",
+          "int"
+        ],
         "minimum": 0,
         "description": "Price per night must be a non-negative number."
       },
